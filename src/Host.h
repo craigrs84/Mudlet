@@ -653,6 +653,8 @@ public:
     Q_ENUM(BlankLineBehaviour)
     BlankLineBehaviour mBlankLineBehaviour = BlankLineBehaviour::Show;
 
+    bool mAccessibleCodeEditor = false;
+
 signals:
     // Tells TTextEdit instances for this profile how to draw the ambiguous
     // width characters:

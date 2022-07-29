@@ -17228,6 +17228,10 @@ int TLuaInterpreter::setConfig(lua_State * L)
         host.mAnnounceIncomingText = getVerifiedBool(L, __func__, 2, "value");
         return success();
     }
+    if (key == qsl("accessibleCodeEditor")) {
+        host.mAccessibleCodeEditor = getVerifiedBool(L, __func__, 2, "value");
+        return success();
+    }
     if (key == qsl("blankLinesBehaviour")) {
         static const QStringList behaviours{"show", "hide", "replacewithspace"};
         const auto behaviour = getVerifiedString(L, __func__, 2, "value");
